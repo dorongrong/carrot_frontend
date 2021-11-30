@@ -42,7 +42,9 @@ const App = () => {
 
   return (
     <>
-      <input type="text" onKeyDown={preventKeyDown} />
+      <Test />
+
+      {/*<input type="text" onKeyDown={preventKeyDown} />
       <Counter defaultCount={0} />
       <Adder />
       <Welcome />
@@ -51,9 +53,7 @@ const App = () => {
       <Button name="hello" callback={updateLastestName} />
       <Button name="world" callback={updateLastestName} />
       <Button name="nextop" callback={updateLastestName} />
-      <article>{lastestName} is clicked!</article>
-
-      <Test />
+  <article>{lastestName} is clicked!</article>*/}
 
       {/*s
     <div className="App">
