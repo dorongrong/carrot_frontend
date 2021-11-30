@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Button from "./Button";
 import Title from "./Title";
 import Text from "./Text";
 import Adult from "./Adult";
@@ -16,7 +15,28 @@ import HiddenName from "./HiddenName";
 import { useState } from "react";
 import Test from "./pages/Test";
 
-const App = () => {
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+//import MenuIcon from "@mui/icons-material/Menu";
+
+import { styled } from "@mui/material/styles";
+
+import CssBaseline from "@mui/material/CssBaseline";
+import Fab from "@mui/material/Fab";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import ListItemText from "@mui/material/ListItemText";
+import ListSubheader from "@mui/material/ListSubheader";
+import Avatar from "@mui/material/Avatar";
+
+import { Container, Grid } from "@mui/material";
+
+const App = (): JSX.Element => {
   const [lastestName, setLastestName] = useState("");
   const updateLastestName = (name: string) => {
     setLastestName(name);
@@ -41,8 +61,46 @@ const App = () => {
   };
 
   return (
-    <>
+    <main>
+      <AppBar position="fixed">
+        <Toolbar></Toolbar>
+      </AppBar>
+
+      <Toolbar />
       <Test />
+      <h1>asfasfasf</h1>
+
+      <AppBar position="fixed" sx={{ top: "auto", bottom: 0 }}>
+        <Toolbar>
+          <Grid container>
+            <Grid item xs style={{ backgroundColor: "#22ff2f" }}>
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined">홈</Button>
+              </Box>
+            </Grid>
+            <Grid item xs style={{ backgroundColor: "#ffff2f" }}>
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined">동네활동</Button>
+              </Box>
+            </Grid>
+            <Grid item xs style={{ backgroundColor: "#f22f2f" }}>
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined">내 근처</Button>
+              </Box>
+            </Grid>
+            <Grid item xs style={{ backgroundColor: "#2f2f2f" }}>
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined">채팅</Button>
+              </Box>
+            </Grid>
+            <Grid item xs style={{ backgroundColor: "#2ff222" }}>
+              <Box display="flex" justifyContent="center">
+                <Button variant="outlined">나의 당근</Button>
+              </Box>
+            </Grid>
+          </Grid>
+        </Toolbar>
+      </AppBar>
 
       {/*<input type="text" onKeyDown={preventKeyDown} />
       <Counter defaultCount={0} />
@@ -64,7 +122,7 @@ const App = () => {
       <Photo address={imgsrc} description={articlesrc} />
     </div>
     */}
-    </>
+    </main>
   );
 };
 
